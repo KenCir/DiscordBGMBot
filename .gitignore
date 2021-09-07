@@ -2,3 +2,4 @@
 /sounds
 /build
 .env
+.DS_Store

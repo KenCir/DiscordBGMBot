@@ -24,7 +24,7 @@ client.on('ready', () => {
 
 function playsounds() {
     const player: AudioPlayer = createAudioPlayer();
-    let resource: AudioResource = createAudioResource(`sounds/${sounds[count]}`);
+    const resource: AudioResource = createAudioResource(`sounds/${sounds[count]}`);
     player.play(resource);
     connection?.subscribe(player);
     player.on('error', error => console.error(error));

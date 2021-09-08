@@ -16,5 +16,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm run build
+      - name: 依存関係のインストール
+        run: npm ci
+      - name: ビルド
+        run: npm run build
+      - name: 成果物をアップロードします
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: ./build/
